@@ -1,9 +1,4 @@
-import { useQuiz } from "../Contexts/QuizContext";
-
-function StartScreen() {
-  const { dispatch, questions } = useQuiz();
-  const numQuestions = questions.length;
-
+function StartScreen({ numQuestions, dispatch }) {
   function handleStart() {
     dispatch({ type: "start" });
   }
